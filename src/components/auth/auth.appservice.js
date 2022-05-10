@@ -26,7 +26,7 @@ const isAuthorized = (call, callback) => {
 const banUser = (call, callback) => {
   const accessAuthorized = AccessMdw.isAuthorizedCall(call);
   if (!accessAuthorized) {
-    callback(null, { authorized: false, });
+    callback(null, { success: false, });
   }
 
   const req = call.request;
@@ -48,7 +48,7 @@ const banUser = (call, callback) => {
 const unbanUser = (call, callback) => {
   const accessAuthorized = AccessMdw.isAuthorizedCall(call);
   if (!accessAuthorized) {
-    callback(null, { authorized: false, });
+    callback(null, { success: false, });
   }
 
   const req = call.request;
