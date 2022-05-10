@@ -1,5 +1,5 @@
 const AuthService = require('./services');
-const AccessMdw = require('../access/access.mdw');
+const AccessMdw = require('../access/access.grpc.mdw');
 
 const isAuthorized = (call, callback) => {
   const accessAuthorized = AccessMdw.isAuthorizedCall(call);
