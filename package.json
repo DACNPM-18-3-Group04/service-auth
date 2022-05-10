@@ -1,0 +1,31 @@
+{
+  "name": "service-auth",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DACNPM-18-3-Group04/service-auth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DACNPM-18-3-Group04/service-auth/issues"
+  },
+  "homepage": "https://github.com/DACNPM-18-3-Group04/service-auth#readme",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.6.7",
+    "@grpc/proto-loader": "^0.6.12",
+    "dotenv": "^16.0.0",
+    "mongoose": "^6.3.3",
+    "mongoose-delete": "^0.5.4"
+  }
+}
