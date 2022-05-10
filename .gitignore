@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Logs
 logs
 *.log
@@ -64,3 +65,7 @@ package-lock.json
 
 public/assets/*
 public/tempt/*
+=======
+/node_modules
+.env
+>>>>>>> 913581528055d72cc93ec0d079f665f6931958be
