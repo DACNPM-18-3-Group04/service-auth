@@ -1,7 +1,0 @@
-# dependencies
-/node_modules
-
-/public/images
-*.svg
-
-/.circleci
