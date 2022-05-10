@@ -1,6 +1,12 @@
 const AuthService = require('./services');
+const AccessMdw = require('../access/access.mdw');
 
 const isAuthorized = (call, callback) => {
+  const accessAuthorized = AccessMdw.isAuthorizedCall(call);
+  if (!accessAuthorized) {
+    callback(null, { authorized: false, });
+  }
+
   const req = call.request;
   const params = {
     userId: req.userID,
@@ -18,6 +24,11 @@ const isAuthorized = (call, callback) => {
 }
 
 const banUser = (call, callback) => {
+  const accessAuthorized = AccessMdw.isAuthorizedCall(call);
+  if (!accessAuthorized) {
+    callback(null, { authorized: false, });
+  }
+
   const req = call.request;
   const params = {
     userId: req.userID,
@@ -35,6 +46,11 @@ const banUser = (call, callback) => {
 }
 
 const unbanUser = (call, callback) => {
+  const accessAuthorized = AccessMdw.isAuthorizedCall(call);
+  if (!accessAuthorized) {
+    callback(null, { authorized: false, });
+  }
+
   const req = call.request;
   const params = {
     userId: req.userID,

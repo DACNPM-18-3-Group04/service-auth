@@ -8,7 +8,7 @@ const isAuthorized = async ({ userId }) => {
     throw errUser;
   }
 
-  console.log(user);
+  // console.log(user);
   if (!isEmpty(user)) {
     return {
       authorized: false,

@@ -18,8 +18,6 @@ BannedUserSchema.plugin(mongooseDelete, {
   deletedAt: true
 });
 
-BannedUserSchema.index({ userId: 1, deletedAt: 1 }, { unique: true });
-
 const BannedUser = mongoose.model(CollectionName, BannedUserSchema);
 
 module.exports = BannedUser;

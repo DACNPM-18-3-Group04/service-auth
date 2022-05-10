@@ -5,7 +5,7 @@ const Default = require('./default');
 module.exports = {
   service: {
     version: 'v1',
-    authHeader: 'Authorization',
+    authHeader: 'authorization',  // All lowercased
     port: process.env.PORT || Default.service.port,
     secretKey: process.env.SECRET_KEY || Default.service.secretKey,
   },
