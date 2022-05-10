@@ -1,6 +1,6 @@
-const BannedUser = require("../../../models/bannedUser");
+const BannedUser = require('../../../models/bannedUser');
 
-const getbyUserId = async (userId = "") => {
+const getbyUserId = async (userId = '') => {
   const user = BannedUser.findOne({
     userId: userId,
   });
@@ -8,7 +8,7 @@ const getbyUserId = async (userId = "") => {
   return user;
 };
 
-const create = async ({ userId = "" }) => {
+const create = async ({ userId = '' }) => {
   const filter = {
     userId: userId,
   };
@@ -23,7 +23,8 @@ const create = async ({ userId = "" }) => {
   });
 };
 
-const deleteByUserId = async (userId = "") => {
+// eslint-disable-next-line arrow-body-style
+const deleteByUserId = async (userId = '') => {
   return BannedUser.delete({
     userId: userId,
   });

@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const config = require("./");
+const config = require('.');
 
 //Connect to DB
 const connect = () => {
@@ -10,7 +10,7 @@ const connect = () => {
       useUnifiedTopology: true,
     })
     .then(() => {
-      console.log("Connect to DB successfully");
+      console.log('Connect to DB successfully');
     });
 };
 

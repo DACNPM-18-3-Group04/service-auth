@@ -1,5 +1,5 @@
-const handle = require("./handlePromise");
-const isEmpty = require("./isEmpty");
+const handle = require('./handlePromise');
+const isEmpty = require('./isEmpty');
 
 module.exports = {
   handle,

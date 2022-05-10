@@ -1,11 +1,11 @@
-require("dotenv").config();
+require('dotenv').config();
 
-const Default = require("./default");
+const Default = require('./default');
 
 module.exports = {
   service: {
-    version: "v1",
-    authHeader: "authorization", // All lowercased
+    version: 'v1',
+    authHeader: 'authorization', // All lowercased
     port: process.env.PORT || Default.service.port,
     secretKey: process.env.SECRET_KEY || Default.service.secretKey,
   },

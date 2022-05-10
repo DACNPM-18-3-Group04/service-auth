@@ -1,5 +1,5 @@
-const AuthService = require("./services");
-const AccessMdw = require("../access/access.mdw");
+const AuthService = require('./services');
+const AccessMdw = require('../access/access.mdw');
 
 const isAuthorized = (call, callback) => {
   const accessAuthorized = AccessMdw.isAuthorizedCall(call);
@@ -14,7 +14,7 @@ const isAuthorized = (call, callback) => {
 
   AuthService.isAuthorized(params)
     .then((data) => {
-      const authorized = data.authorized;
+      const { authorized } = data;
       callback(null, { authorized: authorized });
     })
     .catch((err) => {
@@ -36,7 +36,7 @@ const banUser = (call, callback) => {
 
   AuthService.banUser(params)
     .then((data) => {
-      const success = data.success;
+      const { success } = data;
       callback(null, { success: success });
     })
     .catch((err) => {
@@ -58,7 +58,7 @@ const unbanUser = (call, callback) => {
 
   AuthService.unbanUser(params)
     .then((data) => {
-      const success = data.success;
+      const { success } = data;
       callback(null, { success: success });
     })
     .catch((err) => {

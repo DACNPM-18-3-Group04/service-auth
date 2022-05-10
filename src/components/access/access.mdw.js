@@ -1,4 +1,5 @@
-const config = require("../../configs");
+const config = require('../../configs');
+// eslint-disable-next-line prefer-destructuring
 const secretKey = config.service.secretKey;
 
 const isAuthorizedCall = (call) => {

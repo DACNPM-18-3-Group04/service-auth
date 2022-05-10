@@ -1,10 +1,10 @@
-const AuthRepository = require("../repository");
-const { handle, isEmpty } = require("../../../utils");
+const AuthRepository = require('../repository');
+const { handle, isEmpty } = require('../../../utils');
 
 const isAuthorized = async ({ userId }) => {
   const formattedUserId = `${userId}`;
   const [user, errUser] = await handle(
-    AuthRepository.getbyUserId(formattedUserId)
+    AuthRepository.getbyUserId(formattedUserId),
   );
   if (errUser) {
     throw errUser;
