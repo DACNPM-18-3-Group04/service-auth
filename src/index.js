@@ -1,7 +1,7 @@
-const configs = require('./configs');
-const ServerCredentials = require('./configs/credential.config');
+const configs = require("./configs");
+const ServerCredentials = require("./configs/credential.config");
 
-const server = require('./app');
+const server = require("./app");
 
 const bindCallback = (error, port) => {
   if (error) {
@@ -10,7 +10,7 @@ const bindCallback = (error, port) => {
   }
   server.start();
   console.log(`Server started. Listening on ${port}`);
-}
+};
 
 server.bindAsync(
   `0.0.0.0:${configs.service.port}`,

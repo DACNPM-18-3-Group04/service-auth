@@ -1,21 +1,21 @@
-const mongoose = require('mongoose');
-const mongooseDelete = require('mongoose-delete');
+const mongoose = require("mongoose");
+const mongooseDelete = require("mongoose-delete");
 
-const CollectionName = 'banned_users';
+const CollectionName = "banned_users";
 
 const BannedUserSchema = new mongoose.Schema(
   {
     userId: {
       type: String,
-      required: true
-    }
-  }, 
+      required: true,
+    },
+  },
   { timestamps: true }
 );
 
 BannedUserSchema.plugin(mongooseDelete, {
-  overrideMethods: 'all', 
-  deletedAt: true
+  overrideMethods: "all",
+  deletedAt: true,
 });
 
 const BannedUser = mongoose.model(CollectionName, BannedUserSchema);
