@@ -7,6 +7,6 @@ const schema = new mongoose.Schema(
   { timestamps: false }
 );
 
-const Province = mongoose.model("dupprovinces", schema);
+const Province = mongoose.model("provinces", schema);
 
 module.exports = Province;

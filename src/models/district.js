@@ -8,6 +8,6 @@ const schema = new mongoose.Schema(
   { timestamps: false }
 );
 
-const District = mongoose.model("dupdistricts", schema);
+const District = mongoose.model("districts", schema);
 
 module.exports = District;
