@@ -1,6 +1,7 @@
 const DefaultConfig = {
   service: {
-    port: '50010',
+    port: '3000',
+    grpc_port: '50051',
     secretKey: 'DEFAULT_SECRET_KEY',
   },
   database: {
